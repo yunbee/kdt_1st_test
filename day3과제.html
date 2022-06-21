@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7월달력</title>
+    <style>
+        div {
+            width: 500px;
+            background-color: white;
+            font-size: 0;
+            
+        }
+        span {
+            display: inline-block;
+            width: 15px;
+            padding: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+       .days *:nth-child(2n) {
+           background-color: rgb(52, 123, 204);
+        }
+       .days *:nth-child(2n+1) {
+           background-color: rgb(235, 112, 63);
+        }
+       .box::after {
+            content: "posco";
+        }
+        .box {
+            background-color: rgb(236, 230, 123);
+        }
+
+        .academy {
+            background-color: rgb(92, 172, 212);
+        }
+
+        .sun {
+            background-color: rgb(227, 106, 90);
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="days">
+          <span>월</span>
+          <span>화</span>
+          <span>수</span>
+          <span>목</span>
+          <span>금</span>
+          <span>토</span>
+          <span>일</span>
+        </div> 
+        <div class="day">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="box">1</span>
+          <span>2</span>
+          <span class="sun">3</span>
+        </div>
+        <div class="day">
+          <span class="academy">4</span>
+          <span>5</span>
+          <span class="academy">6</span>
+          <span>7</span>
+          <span class="academy">8</span>
+          <span>9</span>
+          <span class="sun">10</span>
+        </div>
+        <div class="day">
+          <span class="academy">11</span>
+          <span>12</span>
+          <span class="academy">13</span>
+          <span>14</span>
+          <span class="academy">15</span>
+          <span>16</span>
+          <span class="sun">17</span>
+        </div>
+        <div class="day">
+          <span class="academy">18</span>
+          <span>19</span>
+          <span class="academy">20</span>
+          <span>21</span>
+          <span class="academy">22</span>
+          <span>23</span>
+          <span class="sun">24</span>
+        </div>
+        <div class="day">
+          <span class="academy">25</span>
+          <span>26</span>
+          <span class="academy">27</span>
+          <span>28</span>
+          <span class="academy">29</span>
+          <span>30</span>
+          <span class="sun">31</span>
+        </div>
+    </div>
+
+</body>
+</html>
