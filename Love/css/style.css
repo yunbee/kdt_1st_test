@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+/* font-family: 'DotGothic16', sans-serif; */
+
+@font-face {
+    font-family: 'HBIOS-SYS';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* RESET */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    /* border-bottom: 1px solid #999; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 5vh; /* 반응형은 뷰포트로 맞추는게 좋다. */
+}
+
+header #snb {
+    display: none;
+}
+
+header h1 a {
+    font: bold 30px/50px 'DotGothic16';
+    color: #fff;
+}
+
+/* GNB */
+
+header #gnb {
+    display: flex;
+}
+
+header #gnb li {
+    margin: 0px 30px;
+}
+
+
+header #gnb li a {
+    font: 20px/1 'DotGothic16';
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+header #gnb li a:hover {
+    text-shadow: -1px 1px 5px #fff, 1px -1px 5px #fff;
+    
+}
+
+
+/* SNS */
+
+header .sns {
+    display: flex;
+}
+
+header .sns li {
+    margin: 0px 10px;
+}
+
+header .sns li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* VIDEO */
+
+figure {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT */
+
+figure .text {
+    position: absolute;
+    left: 6vw;
+    top: 45%;
+    transform: translate(0, -50%);
+}
+
+figure .text_2 {
+    position: absolute;
+    right: 8vw;
+    top: 45%;
+    transform: translate(0, -50%);
+}
+
+figure .text p {
+    font: normal 8vw/9vw 'HBIOS-SYS';
+    color: #fff;
+}
+
+figure .text p:hover {
+    cursor: pointer;
+    text-shadow: 5px 10px 1px rgb(234, 19, 19);
+}
+
+figure .text_2 p {
+    font: normal 8vw/9vw 'HBIOS-SYS';
+    color: #fff;
+}
+
+figure .text_2 p:hover {
+    cursor: pointer;
+    text-shadow: 5px 10px 1px rgb(230, 16, 123);
+}
+
+figure .text ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+figure .text ul li i {
+    font-size: 30px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+figure .text ul li strong {
+    font: 14px/1 'DotGothic16';
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font: 12px/1 "arial";
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 5vh 5vw;
+    z-index: 2;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 1100px) {
+    header #gnb {
+        display: none;
+    }
+
+    header .sns {
+        display: none;
+    }
+
+    header #snb {
+        display: block;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    header #snb .btn_menu {
+        color: #fff;
+    }
+
+    header #snb .sub_menu {
+        position: absolute;
+        padding: 10px 25px;
+        background-color: black;
+        border: 4px dotted #fff;
+        border-radius: 10px;
+        right: 5vw;
+        text-align: right;
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    header #snb .sub_menu.hide {
+        opacity: 0;
+    }
+
+    header #snb .sub_menu li {
+        padding: 10px 0px;
+        font: 16px/1 'DotGothic16';
+    }
+
+    header #snb .sub_menu li a {
+        color: #fff;
+    }
+
+    header #snb .sub_menu li a i {
+        margin-left: 8px;
+    }
+
+    figure .text p {
+        font-size: 8vw;
+    }
+}
